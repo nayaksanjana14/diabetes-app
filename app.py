@@ -17,7 +17,7 @@ import seaborn as sns
 
 
 
-df = pd.read_csv(![](diabetes.csv))
+df = pd.read_csv(diabetes.csv)
 
 # HEADINGS
 st.title('Diabetes Checkup')
@@ -69,7 +69,7 @@ st.write(user_data)
 
 # MODEL
 rf  = RandomForestClassifier()
-rf.fit(x_train, y_train)
+rf.fit(x_train.values, y_train.values)
 user_result = rf.predict(user_data)
 
 
